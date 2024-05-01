@@ -1,0 +1,9 @@
+---
+- name: Reboot Windows Server
+  hosts: Windows
+  gather_facts: no
+
+  tasks:
+    - name: Reboot the machine with all defaults
+      ansible.windows.win_reboot:
+        msg: "Rebooting machine in 5 seconds"
