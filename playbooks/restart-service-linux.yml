@@ -1,0 +1,10 @@
+---
+- name: Reboot Windows Server
+  hosts: Linux
+  gather_facts: no
+
+  tasks:
+    - name: Restart service Linux
+      ansible.builtin.service:
+        name: servicename(CHANGEME)
+        state: restarted
